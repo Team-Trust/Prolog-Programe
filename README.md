@@ -7,7 +7,7 @@ Prolog program for calculating and displaying truth tables for Boolean expressio
 
 /* :- op(900,fy,'not').  */
 
-find_vars(N,V,V) :- member(N,[0,1]),!.    /* Boolean constants in expression */
+find_vars(N,V,V) :- member(N,[0,1]),!.    
 find_vars(X,Vin,Vout) :- atom(X), 
                          (member(X,Vin) -> Vout = Vin ;   
                             Vout = [X|Vin]).                 
